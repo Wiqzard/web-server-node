@@ -46,6 +46,13 @@ app.get("/", (req, res) => {            //req(est): stores many informations abo
     });      //wenn jemand ein http request macht, bekommt er das zurück
 });                                     //HTML Tags gehen auch  / handeler für http get request
 
+app.get("/projects", (req, res) => {
+    res.render("projects.hbs", {
+        pageTitle: "Projects"
+    });
+});
+
+
 
 app.get("/about", (req, res) => {   //"/about" ist der route    (Rute oder URL) localhost:3000/about
     res.render("about.hbs", {       //lets us render our hbs templates
